@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jean Paul Benavente García — Sitio Oficial</title>
+  <meta name="description" content="Sitio oficial de Jean Paul Benavente García: propuestas, publicaciones e información.">
+
+  <style>
+    :root {
+      --bg:#ffffff;
+      --text:#1a1a1a;
+      --muted:#666;
+      --accent:#0b5ed7;
+      --card:#ffffff;
+      --radius:14px;
+      --maxw:1200px;
+    }
+
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:Inter, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    /* ---------- ANIMACIÓN ---------- */
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-up {
+      opacity: 0;
+      animation: slideUp 0.9s ease-out forwards;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 40px;
+      background:#111;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .brand {
+      font-size:22px;
+      font-weight:700;
+    }
+
+    nav a {
+      color:white;
+      text-decoration:none;
+      margin-left:24px;
+      font-weight:500;
+      font-size:16px;
+    }
+
+    nav a:hover { opacity:0.7; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:70px 40px;
+      background:#1a1a1a;
+      color:white;
+      gap:40px;
+    }
+
+    .hero-img {
+      width:100%;
+      max-width:600px 600px;
+      border-radius:8px;
+      display:block;
+      margin:auto;
+    }
+
+    .hero-text h1 {
+      font-size:48px;
+      font-weight:800;
+      margin:0 0 10px 0;
+    }
+
+    .hero-text h2 {
+      font-size:26px;
+      font-weight:400;
+      margin:0 0 20px 0;
+      color:#d9e1f2;
+    }
+
+    .hero-text p {
+      font-size:17px;
+      line-height:1.6;
+      color:#dcdcdc;
+      max-width:520px;
+    }
+
+    /* ---------- CONTENIDO ---------- */
+    .cv-section {
+      background: #2b2b2b;
+      color: #ffffff;
+      padding: 50px 40px;
+      border-radius: 0;
+      margin-top: 40px;
+      line-height: 1.7;
+    }
+
+    .cv-section h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .cv-section p {
+      font-size: 20px;
+      color: #e3e3e3;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: brand;
+      margin: auto;
+      padding: 0;         /* ← Quitamos padding que crea el espacio */
+    }
+    #sobre{
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .cv-section{
+      margin-top: 0;
+    }
+
+        /* ---------- CONTACTO DARK ---------- */
+
+    .contact-section {
+      background: #111;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .contact-card {
+      max-width: 900px;
+      margin: auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .contact-card h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #eaeaea;
+    }
+
+    /* GRID DE DOS COLUMNAS */
+    .contact-card .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+      width: 100%;
+      padding: 14px;
+      background: #161616;
+      border: 1px solid #333;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .contact-card input::placeholder,
+    .contact-card textarea::placeholder {
+      color: #ffffff;
+    }
+
+    .contact-card input:focus,
+    .contact-card textarea:focus {
+      border-color: #ffffff;
+      box-shadow: 0 0 8px #fefeff;
+    }
+
+    .contact-card textarea {
+      min-height: 150px;
+      resize: none;
+    }
+
+    /* BOTÓN */
+    .btn-contact {
+      width: 100%;
+      margin-top: 10px;
+      padding: 14px;
+      background: #111; /* tu color */
+      color: rgb(172, 165, 165);
+      font-size: 17px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-contact:hover {
+      background: #000000;
+      transform: scale(1.02);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #111; /* tu color */
+    }
+
+
+    /* RESPONSIVO */
+    @media (max-width: 700px) {
+      .contact-card .row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding:20px;
+      text-align:center;
+      background:#111;
+      color:white;
+      margin-top:40px;
+    }
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .hero {
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:40px 20px;
+      }
+      .hero-text h1 { font-size:36px; }
+      .hero-text h2 { font-size:20px; }
+      nav a { margin-left:16px; }
+    }
+
+    /* Animación fade */
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(10px); }
+      10% { opacity: 1; transform: translateY(0); }
+      40% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-10px); }
+    }
+
+    .rotating-text {
+      font-size: 26px;
+      font-weight: 400;
+      color: #d9e1f2;
+      animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    /*nueva animacion */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s ease-out;
+    }
+
+    /* Estado final: visible */
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ---------- HEADER ---------- -->
+  <header class="slide-up">
+    <div class="brand">Jean Paul Benavente García</div>
+    <nav>
+      <a href="#sobre">Acerca de</a>
+      <a href="Publicaciones.html">Publicaciones</a>
+      <a href="Eficienthink.html">EficienThink</a>
+      <a href="Galeria.html">Galeria</a>
+    </nav>
+  </header>
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero slide-up">
+    <div>
+      <img src="IMG_0119.JPG" alt="Jean Paul Benavente García" class="hero-img slide-up">
+    </div>
+
+    <div class="hero-text slide-up" style="animation-delay:0.2s;">
+      <h1>Jean Paul<br>Benavente García</h1>
+      <h2 class="rotating-text" id="rotatingText">Profesor de Economía</h2>
+
+      <p>
+        Soy una persona profundamente sensible ante la desigualdad, el sufrimiento y las carencias que aún afectan a muchos. Estas realidades han marcado mi vida y alimentado una convicción que me acompaña desde siempre. Mi historia está hecha de contrastes: desde enfrentar las limitaciones que vivió mi familia —la falta de servicios básicos, las barreras de oportunidades— hasta levantarme con fuerza para enfrentarlas, impulsado por una búsqueda constante de mejora y de superación permanente.
+        Soy vehemente al defender lo que creo, con una mezcla de templanza y valentía. Aunque puedo parecer flexible, no cedo en lo esencial. La libertad, la justicia social, la democracia y el arraigo a mi tierra son convicciones profundas que guían mis acciones.
+        Me apasiona inspirar y servir. Encuentro plenitud cuando conecto con las personas, cuando una charla, una clase o un proyecto transforma realidades. Creo que cada momento es una oportunidad para liderar desde la sensibilidad, la creatividad y la autenticidad.
+        Aquí comparto mi visión, mis iniciativas y mis reflexiones. Porque creo que el cambio empieza por conocernos, por atrevernos a actuar, y por nunca dejar de creer que otro futuro es posible, si lo construimos juntos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ---------- SOBRE ---------- -->
+  <section class="container" id="sobre">
+    <div class="cv-section reveal">
+      <h2>Currículum Vitae</h2>
+        <p>
+          Soy Jean Paul Benavente García, natural de Cusco, Economista. Desde 1999 soy Docente Principal de la Escuela de Economía de la UNSAAC, regentando, entre otras, las asignaturas de Economía Pública, Gestión Pública y Planeamiento Estratégico.
+        </p>
+
+        <p>
+          En el sector público he ocupado el cargo de Gobernador Regional de Cusco durante el período 2019–2022. Asimismo, he sido Jefe de la Oficina de Planificación Universitaria (2013–2014), Gerente Regional de Desarrollo Económico (2009–2010), Director Regional de Comercio Exterior y Turismo (2007–2009) y Coordinador Regional del Programa Laboral Juvenil PROJOVEN (1999–2003).
+        </p>
+
+        <p>
+          En el sector privado he desempeñado cargos como Gerente del Comité Regional de Exportación para el Banco Mundial (2006) y Gerente Regional del Consorcio de Organizaciones Privadas de Apoyo a la MYPE – COPEME (2003–2006).
+        </p>
+
+        <p>
+          Cuento con dos maestrías: la primera en Economía y Políticas Públicas en Buenos Aires – Argentina, y la segunda en Economía y Procesos Sociales y Económicos de la Globalización en la Universidad del País Vasco, España. Actualmente soy egresado y candidato a Doctor en el Doctorado en Gestión Pública Global por la Universidad Nacional Mayor de San Marcos.
+        </p>
+
+        <p>
+          Comparto algunos estudios e investigaciones publicadas: en 2024, <em>“Hacia un nuevo Modelo para Mejorar la Gestión de Inversiones”</em>; en 2023, <em>“Elaboración de la Propuesta para la Memoria de Descentralización, Convenio PNUD–PCM”</em>. También desarrollé el estudio <em>“Diversificación Productiva en el Sur Andino”</em> y el documento de trabajo <em>“Eficiencia Técnica del Gasto Público”</em>. En 2018 elaboré <em>“Impactos del Turismo en la Región Cusco”</em>, así como la Guía Metodológica para el cumplimiento de la Meta 38 – MINCETUR. He elaborado además diversos planes estratégicos y estudios sobre competitividad, diversificación productiva y gestión pública.
+        </p>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ---------- CONTACTO DARK ---------- -->
+  <section id="contacto" class="contact-section reveal">
+    <div class="contact-card">
+      <h2>Contacto</h2>
+
+      <form action="https://formsubmit.co/jeanpaulbenavente19@gmail.com" method="POST">
+
+        <input type="hidden" name="_next" value="https://TU-DOMINIO.com/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="row">
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required>
+        </div>
+
+        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+
+        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+        <button class="btn-contact" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="slide-up">
+    © <span id="year"></span> Jean Paul Benavente García — Todos los derechos reservados.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert("Gracias, " + name + ". Tu mensaje ha sido enviado.");
+      document.getElementById("contactForm").reset();
+    }
+  </script>
+
+  <script>
+    const textos = [
+      "Profesor de Economía",
+      "Líder Regional",
+      "Investigador",
+      "Economista",
+      "Docente Universitario"
+    ];
+
+    let indice = 0;
+    const elemento = document.getElementById("rotatingText");
+
+    setInterval(() => {
+      indice = (indice + 1) % textos.length;
+      elemento.textContent = textos[indice];
+    }, 2000);
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
