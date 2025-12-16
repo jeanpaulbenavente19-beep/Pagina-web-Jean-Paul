@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EficienThink — Blog de Jean Paul Benavente</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+
   <style>
     :root{
       --bg:#f1f1f9; 
@@ -104,7 +107,7 @@
             height: 48px;
             background: #6a5acd;
             color: white;
-            font-weight: bold;
+            font-weight: 'Bodoni Moda';
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,6 +118,7 @@
 
         .author-name {
             margin: 0;
+            font-family: 'Bodoni Moda';
             font-weight: bold;
             font-size: 16px;
             color: #000000;
@@ -125,13 +129,6 @@
             margin-top: 3px;
             color: #040404;
             font-size: 14px;
-        }
-
-        .article-title {
-            font-size: 36px;
-            margin: 25px 0;
-            line-height: 1.2;
-            color: #000000;
         }
 
         .article-updated {
@@ -146,6 +143,95 @@
             margin-bottom: 20px;
             color: #060606;
         }
+        .article-body{
+      font-family:Georgia, 'Times New Roman', serif;
+      color:var(--text);
+    }
+
+    .article-title{
+      font-family:'Bodoni Moda', serif;
+      font-size:46px;
+      line-height:1.15;
+      margin:30px 0 10px;
+      color:#000;
+    }
+
+    .article-body p{
+      font-size:20px;
+      line-height:1.75;
+      margin-bottom:26px;
+    }
+
+    .article-body .lead{
+      font-size:22px;
+      font-weight:500;
+    }
+
+    .article-body h2{
+      font-family:'Bodoni Moda';
+      font-size:26px;
+      margin:70px 0 22px;
+      color:#000;
+    }
+    .share-article {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e5e5;
+      font-family: Inter, sans-serif;
+    }
+
+    .share-article span {
+      font-weight: 600;
+      color: #000;
+      margin-right: 8px;
+    }
+
+    .share-article a,
+    .share-article button {
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #000;
+      padding: 6px 8px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .share-article a:hover,
+    .share-article button:hover {
+      background: #f0f0f0;
+    }
+
+    .post {
+      margin-bottom: 80px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 60px 0 30px;
+    }
+
+    .pagination button {
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .pagination button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
     </style>
 </head>
 
@@ -170,30 +256,518 @@
   </script>
 
   <section class="article-container">
-    <div class="author-info">
-        <div class="author-avatar">J</div>
-        <div>
-        <p class="author-name">Jean Paul Benavente García</p>
-        <p class="article-meta">26 jun · 2 min de lectura</p>
-        </div>
-    </div>
-
     <h1 class="article-title">
         Articulos: 
     </h1>
 
-    <p class="article-updated">Actualizado: 30 jun</p>
+  <article class="post">  
+    <h1 class="article-title">
+        Turismo en Cusco: <br>
+        Un Potencial Económico que Necesita Competitividad e Inclusión
+    </h1>
+    <section class="article-body">
 
-    <article class="article-body">
-      <iframe 
-        src="BLOG1.pdf"
-        width="100%" 
-        height="600px"
-        style="border: none;">
-      </iframe>
-        <!-- Puedes seguir escribiendo más contenido -->
-        </article>
+        <p class="lead">
+          La región Cusco, corazón del turismo en el Perú, no solo alberga Machupicchu y el legado
+          de los incas, sino también un clúster en consolidación de la industria turística.
+        </p>
+
+        <p>
+          La discusión se centra en los verdaderos beneficios que el turismo genera para la
+          población cusqueña, en un contexto donde predomina un modelo concentrado y poco
+          competitivo.
+        </p>
+
+        <h2>Brechas que preocupan</h2>
+        <p>
+          Estudios de la Universidad Nacional de San Antonio Abad del Cusco muestran fuertes
+          asimetrías entre empresas. Las firmas formales generan ingresos en promedio 26% mayores
+          que las informales.
+        </p>
+
+        <p>
+          Además, el 70% de las empresas registra ventas por debajo de 13 UITs anuales,
+          convirtiéndose en unidades de subsistencia.
+        </p>
+
+        <h2>La informalidad y su impacto</h2>
+
+        <p>
+          Cerca del 67% de las unidades económicas del sector turístico son informales, limitando
+          la recaudación fiscal y la sostenibilidad del desarrollo regional.
+        </p>
+
+        <h2>¿Existe un clúster turístico en Cusco?</h2>
+
+        <p>
+          Aunque existen elementos de aglomeración económica, la cooperación empresarial es baja,
+          dificultando la consolidación de cadenas de valor inclusivas.
+        </p>
+
+        <h2>Conclusión</h2>
+
+        <p>
+          El turismo puede ser una verdadera palanca de desarrollo para Cusco, pero requiere
+          gobernanza eficiente, articulación empresarial y compromiso con la inclusión económica.
+        </p>
+      
+
+      </section>
+    <div class="share-article">
+      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+        f
+      </a>
+
+      <a href="#" id="share-x" aria-label="Compartir en X">
+        𝕏
+      </a>
+
+      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+        in
+      </a>
+
+      <button id="copy-link" aria-label="Copiar enlace">
+        🔗
+      </button>
+    </div>
+  </article>    
+
+  <article class="post">  
+      <h1 class="article-title">
+        Turismo en Cusco: <br>
+        Motor de Desarrollo Inclusivo para el Perú del Futuro
+      </h1>
+
+    <section class="article-body">
+
+      <p>
+        En un contexto nacional marcado por la desaceleración económica, la alta informalidad laboral y
+        la necesidad urgente de diversificar la matriz productiva, el turismo se presenta como una
+        alternativa estratégica para impulsar el desarrollo territorial, generar empleo y fortalecer
+        la identidad cultural. El estudio “Impactos del Turismo en la Región Cusco”, elaborado por la
+        Universidad Nacional de San Antonio Abad del Cusco (UNSAAC), plantea un enfoque innovador para
+        medir con precisión el impacto económico del turismo en espacios subnacionales, a través de la
+        Cuenta Satélite del Turismo.
+      </p>
+
+      <h2>El Caso Cusco: Cifras que Hablan por Sí Solas</h2>
+
+      <p>
+        Según la investigación, el turismo en la región Cusco genera más de S/ 3 mil millones anuales y
+        supera los 100 mil empleos directos e indirectos, convirtiéndose en uno de los principales
+        motores económicos de la región. Sin embargo, el valor de este trabajo no reside únicamente en
+        las cifras, sino en la metodología aplicada: un modelo de medición estandarizado, basado en los
+        criterios de la Organización Mundial del Turismo (OMT), que permite una lectura precisa y
+        territorializada del impacto turístico.
+      </p>
+
+      <p>
+        Este enfoque rompe con la lógica centralista de las estadísticas macroeconómicas nacionales y
+        propone una alternativa concreta para que regiones como Cusco, y muchas otras del país, puedan
+        diseñar políticas públicas basadas en evidencia.
+      </p>
+
+      <h2>El “Espacio Turístico”: Más Allá de Machupicchu</h2>
+
+      <p>
+        Uno de los conceptos clave del estudio es el de espacio turístico, entendido como la suma de
+        rutas, corredores, circuitos y distritos que concentran el flujo de visitantes y la oferta de
+        servicios turísticos. En el caso cusqueño, se identificaron 47 distritos con actividad turística
+        activa, aunque solo el 30% de los atractivos turísticos registrados están realmente en uso.
+      </p>
+
+      <p>
+        Este hallazgo revela un alto grado de concentración en torno a Machupicchu, lo que genera
+        desequilibrios territoriales y oportunidades desaprovechadas en otras zonas con igual o mayor
+        potencial cultural, ecológico y comunitario.
+      </p>
+
+      <h2>Problemas Estructurales: Informalidad y Débil Gobernanza</h2>
+
+      <p>
+        A pesar de los beneficios económicos, el estudio advierte una serie de problemas que limitan el
+        desarrollo integral del sector:
+      </p>
+
+      <ul>
+        <p>
+          Informalidad empresarial generalizada, especialmente en micro y pequeñas empresas turísticas
+          (MYPES).
+        </p>
+        <p>
+          Falta de articulación entre instituciones públicas y privadas para el levantamiento y uso de
+          datos.
+        </p>
+        <p>
+          Dependencia excesiva de un solo atractivo (Machupicchu), que genera cuellos de botella y
+          reduce el potencial de diversificación.
+        </p>
+        <p>
+          Debilidad institucional en gobiernos regionales y locales para implementar políticas
+          turísticas efectivas.
+        </p>
+      </ul>
+
+      <p>
+        Estas limitaciones evidencian la necesidad urgente de profesionalizar la gestión turística y
+        fortalecer las capacidades estadísticas e institucionales a nivel subnacional.
+      </p>
+
+      <h2>La Cuenta Satélite de Turismo: Una Herramienta para Gobernar con Datos</h2>
+
+      <p>
+        El estudio propone como solución la aplicación de la Cuenta Satélite del Turismo (CST), una
+        herramienta estadística que permite cuantificar con precisión el aporte del turismo al PBI, al
+        empleo y al consumo interno, con base en estándares internacionales.
+      </p>
+
+      <p>
+        Para Cusco, se desarrollaron tres tablas clave:
+      </p>
+
+      <ul>
+        <p>Consumo turístico interior, que mide el gasto de los visitantes.</p>
+        <p>
+          Cuentas de producción, que identifica las industrias que producen bienes y servicios
+          turísticos.
+        </p>
+        <p>
+          Empleo en las industrias turísticas, con datos desagregados por sexo, tipo de empleo y
+          jornada.
+        </p>
+      </ul>
+
+      <p>
+        Estas mediciones no solo permiten conocer el peso real del turismo en la economía regional,
+        sino que también orientan decisiones de inversión, financiamiento y promoción más eficientes
+        y equitativas.
+      </p>
+
+      <h2>Relevancia Nacional: Un Modelo Replicable</h2>
+
+      <p>
+        La experiencia de Cusco, más allá de sus particularidades, representa un modelo replicable
+        para otras regiones del Perú. En un país con grandes desigualdades territoriales,
+        diversificación productiva limitada y escasa planificación basada en evidencia, aplicar
+        herramientas como la CST permitiría:
+      </p>
+
+      <ul>
+        <p>
+          Descentralizar el crecimiento económico, promoviendo el desarrollo de destinos emergentes.
+        </p>
+        <p>
+          Incluir a las MYPES en cadenas de valor más estables y formales.
+        </p>
+        <p>
+          Diseñar políticas públicas con enfoque territorial, inclusivo y sostenible.
+        </p>
+      </ul>
+
+      <p>
+        El estudio también sugiere que infraestructuras como el nuevo aeropuerto de Chinchero podrían
+        facilitar la redistribución de flujos turísticos y fortalecer rutas alternativas, reduciendo
+        la presión sobre Machupicchu y ampliando las oportunidades en otras provincias.
+      </p>
+
+      <h2>Conclusión: Turismo como Política de Estado</h2>
+
+      <p>
+        El turismo no debe ser visto únicamente como una actividad económica, sino como una verdadera
+        estrategia de desarrollo sostenible. Para ello, es necesario pasar de discursos a políticas
+        concretas: profesionalizar la gestión turística, fortalecer la gobernanza territorial y,
+        sobre todo, medir para decidir.
+      </p>
+
+      <p>
+        La experiencia de Cusco demuestra que es posible avanzar hacia un turismo más competitivo,
+        inclusivo y descentralizado. Lo que falta es voluntad política, visión territorial y
+        compromiso con el desarrollo.
+      </p>
+
+      <p>
+        El Perú necesita tomar al turismo en serio. Cusco ya ha dado el primer paso.
+      </p>
+
     </section>
+
+
+
+
+    <div class="share-article">
+      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+        f
+      </a>
+
+      <a href="#" id="share-x" aria-label="Compartir en X">
+        𝕏
+      </a>
+
+      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+        in
+      </a>
+
+      <button id="copy-link" aria-label="Copiar enlace">
+        🔗
+      </button>
+    </div>
+  </article>  
+
+
+  <article class="post">
+  <h1 class="article-title">
+    Diversificación productiva en el Perú: <br>
+    una necesidad urgente en tiempos de estancamiento económico
+  </h1>
+
+  <section class="article-body">
+
+    <p>
+      En un Perú que enfrenta un crecimiento económico negativo y una preocupante dependencia de sus
+      recursos naturales, se vuelve urgente repensar el modelo económico primario-exportador que ha
+      dominado durante décadas. El informe “Diversificación productiva y renta extractiva en el Sur
+      Andino” ofrece una radiografía clara de esta problemática, centrándose en tres regiones clave:
+      Apurímac, Arequipa y Cusco.
+    </p>
+
+    <h2>La trampa de la volatilidad extractiva</h2>
+
+    <p>
+      El estudio revela que la economía peruana está atrapada en un ciclo de alta volatilidad debido
+      a su dependencia de la minería. El precio internacional del cobre, por ejemplo, tiene un peso
+      desproporcionado en el comportamiento del PBI, lo cual genera ciclos de auge y recesión que
+      afectan la inversión, el empleo y el bienestar social. Este fenómeno no solo frena la
+      diversificación económica, sino que también perpetúa conflictos sociales y deteriora la
+      calidad institucional.
+    </p>
+
+    <h2>Gobernanza débil y oportunidades desperdiciadas</h2>
+
+    <p>
+      Aunque las regiones reciben cuantiosos recursos por concepto de canon y regalías (hasta el
+      28% de los ingresos públicos), la falta de institucionalidad y la baja capacidad de ejecución
+      de políticas productivas hacen que estas rentas no se traduzcan en desarrollo sostenible. El
+      documento critica la escasa articulación entre gobiernos subnacionales, el sector privado y
+      la sociedad civil, y plantea que las Agencias Regionales de Desarrollo (ARD) deben fortalecerse
+      como espacios de gobernanza territorial.
+    </p>
+
+    <h2>Cadenas productivas: el camino hacia un desarrollo con rostro local</h2>
+
+    <p>
+      El informe identifica sectores no extractivos con alto potencial de crecimiento en el
+      Corredor Minero del Sur: agroindustria, turismo, textiles y productos medicinales. Sin
+      embargo, estos sectores enfrentan cuellos de botella debido a la informalidad, la falta de
+      innovación tecnológica y una débil cultura emprendedora. Pese a ello, se plantean estrategias
+      como la diversificación desde los sectores extractivos mediante clusters mineros o la
+      inversión en innovación y capital humano.
+    </p>
+
+    <h2>¿Qué camino debe seguir el Perú?</h2>
+
+    <p>
+      Para salir del estancamiento, el país necesita:
+    </p>
+
+    <ul>
+      <p>
+        Reformular su estructura productiva, priorizando actividades de mayor valor agregado.
+      </p>
+      <p>
+        Fortalecer la gobernanza multiactor, institucionalizando las ARD con participación activa
+        del Estado, sector privado, academia y sociedad civil.
+      </p>
+      <p>
+        Redirigir los ingresos mineros hacia proyectos estratégicos de diversificación e innovación.
+      </p>
+      <p>
+        Promover un desarrollo territorial inclusivo, que integre a las zonas rurales y periféricas
+        en la economía nacional.
+      </p>
+    </ul>
+
+    <h2>Conclusión</h2>
+
+    <p>
+      La diversificación productiva no es un lujo, es una necesidad. Perú no puede seguir
+      dependiendo de ciclos de precios internacionales para sostener su economía. La pandemia y
+      la actual recesión lo han dejado claro: sin políticas firmes, sin gobernanza efectiva y sin
+      inversión estratégica en sectores productivos alternativos, el desarrollo seguirá siendo
+      una promesa postergada.
+    </p>
+  </section>
+    <div class="share-article">
+      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+        f
+      </a>
+
+      <a href="#" id="share-x" aria-label="Compartir en X">
+        𝕏
+      </a>
+
+      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+        in
+      </a>
+
+      <button id="copy-link" aria-label="Copiar enlace">
+        🔗
+      </button>
+    </div>
+  </article>
+
+  <article class="post">
+    <h1 class="article-title">
+    Machu Picchu no se vende: <br>
+    el fin de un monopolio turístico y la oportunidad para los cusqueños
+  </h1>
+
+  <section class="article-body">
+
+    <p>
+      Durante casi tres décadas, el Hotel Sanctuary Lodge operó junto a la ciudadela inca de Machu
+      Picchu bajo un contrato de usufructo que hoy genera más preguntas que respuestas. Mientras el
+      turismo creció exponencialmente, los beneficios para el Cusco y sus comunidades han sido
+      mínimos. En mayo de 2025 vence ese contrato. Esta es la oportunidad para que Machu Picchu deje
+      de ser un negocio para unos pocos y se convierta en un motor de desarrollo para todos.
+    </p>
+
+    <h2>Un contrato cuestionado desde su origen</h2>
+
+    <p>
+      En 1995 se otorgó una concesión del Hotel de Turistas por 20 años. Cuatro años después se
+      convirtió en usufructo, con facultades ampliadas para la empresa operadora. Y en 2013, sin
+      autorización del Consejo Regional y sin inscribirse en registros públicos, se firmó una adenda
+      que extendió el contrato hasta 2025. Todo esto sin que el Gobierno Regional recibiera
+      directamente los ingresos que, por justicia, debieron beneficiar a la región.
+    </p>
+
+    <h2>Millones que no llegaron al Cusco</h2>
+
+    <p>
+      Antes de la pandemia, el Sanctuary Lodge generaba entre 10 y 11 millones de dólares anuales.
+      Sin embargo, estos ingresos iban al Tesoro Público y no a las comunidades cercanas ni a la
+      conservación del patrimonio. De hecho, los beneficios directos para el Cusco han sido escasos
+      y mal distribuidos. La empresa ganó, mientras las comunidades siguieron esperando.
+    </p>
+
+    <h2>No más extensiones ni privilegios</h2>
+
+    <p>
+      La empresa ha pedido una ampliación de 64 meses, argumentando pérdidas por la pandemia y
+      conflictos sociales. Pero el compromiso firmado fue claro: no extenderse ni un día más del
+      16 de mayo de 2025. Ceder ahora sería renunciar a la posibilidad de corregir un modelo injusto.
+    </p>
+
+    <h2>Una nueva visión para Machu Picchu</h2>
+
+    <p>
+      El fin del contrato debe ser el inicio de una nueva etapa. Transformar el actual hotel en un
+      Ecolodge con Centro de Interpretación permitiría educar al visitante, reducir el impacto
+      ambiental y enriquecer la experiencia turística. A la vez, una licitación internacional
+      podría atraer operadores que respeten el patrimonio y redistribuyan los ingresos de forma
+      equitativa.
+    </p>
+
+    <h2>Turismo con rostro local</h2>
+
+    <p>
+      Los recursos generados por el turismo deben invertirse en la recuperación del patrimonio
+      inmaterial, en proyectos sostenibles y en mejorar la calidad de vida de los cusqueños. Esto
+      no solo es justo, sino estratégico: los turistas del futuro buscan autenticidad, respeto por
+      el medio ambiente y experiencias humanas, no solo fotografías.
+    </p>
+
+    <h2>Conclusión: el Cusco decide</h2>
+
+    <p>
+      En un país que lucha por recuperar su soberanía sobre sus recursos, Machu Picchu no puede
+      seguir siendo un enclave privado. El contrato del Sanctuary Lodge debe terminar como se
+      acordó. Y en su lugar debe construirse un modelo que combine conservación, justicia y
+      desarrollo. Porque Machu Picchu es de todos, y su futuro también debe serlo.
+    </p>
+
+
+  </section>
+    <div class="share-article">
+        <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+          f
+        </a>
+
+        <a href="#" id="share-x" aria-label="Compartir en X">
+          𝕏
+        </a>
+
+        <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+          in
+        </a>
+
+        <button id="copy-link" aria-label="Copiar enlace">
+          🔗
+        </button>
+      </div>
+  </article>
+  
+  <div class="pagination">
+    <button id="prev">← Anterior</button>
+    <button id="next">Siguiente →</button>
+  </div>
+
+    </section>
+  <script>
+    const url = window.location.href;
+    const title = document.querySelector('.article-title')?.innerText || document.title;
+
+    document.getElementById('share-facebook').href =
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+
+    document.getElementById('share-x').href =
+      `https://x.com/jp_benavente?s=11&t=l0ksA__UK-1zjH5poissKg=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+
+    document.getElementById('share-linkedin').href =
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+
+    document.getElementById('copy-link').addEventListener('click', () => {
+      navigator.clipboard.writeText(url);
+      alert('Enlace copiado 📋');
+    });
+  </script>
+
+
+  <script>
+    const posts = document.querySelectorAll('.post');
+    const perPage = 2;
+    let currentPage = 1;
+
+    function renderPage() {
+      const start = (currentPage - 1) * perPage;
+      const end = start + perPage;
+
+      posts.forEach((post, index) => {
+        post.style.display = (index >= start && index < end) ? 'block' : 'none';
+      });
+
+      document.getElementById('prev').disabled = currentPage === 1;
+      document.getElementById('next').disabled = end >= posts.length;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        renderPage();
+      }
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      if (currentPage * perPage < posts.length) {
+        currentPage++;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        renderPage();
+      }
+    });
+
+    renderPage();
+  </script>
 
 </body>
 </html>
