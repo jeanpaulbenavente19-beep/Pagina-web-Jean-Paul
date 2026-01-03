@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rendición de Cuentas</title>
+
+<style>
+    .container{
+      max-width:var(--maxw); 
+      margin:28px auto; 
+      padding:20px
+    }
+
+     .back{
+      color:var(--accent); 
+      text-decoration:none; 
+      font-weight:600;
+      font-size:18px;
+    }
+
+    body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0 120px;
+        background: white;
+        color: #222;
+    }
+
+    h1 {
+        font-size: 72px;
+        margin-top: 80px;
+        font-weight: 400;
+    }
+
+    .pub-item {
+        display: grid;
+        grid-template-columns: 120px auto 200px;
+        align-items: start;
+        margin: 80px 0;
+        column-gap: 40px;
+    }
+
+    .year {
+        font-size: 28px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .description {
+        font-size: 26px;
+        line-height: 1.4;
+        max-width: 700px;
+    }
+
+    .cover img {
+        width: 180px;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Animación suave al hacer scroll */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <a class="back" href="index.html">← Volver al inicio</a>
+</div>
+
+<h1>Rendición de Cuentas</h1>
+
+<!-- PUBLICACIÓN 1 -->
+<div class="pub-item fade-in">
+    <div class="year">2022</div>
+    <div class="description">
+        Audiencia publica(Rendición de Cuentas 2019 2022: Logros y Avances de la
+        Gestión, ante el plano del Consejo Regional)
+    </div>
+    <div class="cover">
+        <a href="Rendición de Cuentas GOBERNADOR - Consejo Regional 11.11.pdf" target="_blanck">
+            <img src="IMG,9129.png" alt="Portada 2023">
+        </a>
+    </div>
+</div>
+
+<script>
+    // animación scroll
+    const items = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
