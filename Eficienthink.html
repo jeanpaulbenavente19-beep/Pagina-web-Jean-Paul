@@ -83,7 +83,7 @@
     <style>
         body {
             margin: 0;
-            background: #000000;
+            background: linear-gradient(130deg, #0f3c5d, #1e7f43);
             font-family: Arial, sans-serif;
         }
 
@@ -91,9 +91,6 @@
             max-width: 850px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .author-info {
@@ -121,19 +118,19 @@
             font-family: 'Bodoni Moda';
             font-weight: bold;
             font-size: 16px;
-            color: #000000;
+            color: #fcfbfb;
         }
 
         .article-meta {
             margin: 0;
             margin-top: 3px;
-            color: #040404;
+            color: #ffffff;
             font-size: 14px;
         }
 
         .article-updated {
             font-size: 14px;
-            color: #080808;
+            color: #ffffff;
             margin-bottom: 25px;
         }
 
@@ -141,7 +138,7 @@
             font-size: 18px;
             line-height: 1.7;
             margin-bottom: 20px;
-            color: #060606;
+            color: #ffffff;
         }
         .article-body{
       font-family:Georgia, 'Times New Roman', serif;
@@ -153,7 +150,7 @@
       font-size:46px;
       line-height:1.15;
       margin:30px 0 10px;
-      color:#000;
+      color:#ffffff;
     }
 
     .article-body p{
@@ -171,7 +168,7 @@
       font-family:'Bodoni Moda';
       font-size:26px;
       margin:70px 0 22px;
-      color:#000;
+      color:#fffdfd;
     }
     .share-article {
       display: flex;
@@ -185,7 +182,7 @@
 
     .share-article span {
       font-weight: 600;
-      color: #000;
+      color: #ffffff;
       margin-right: 8px;
     }
 
@@ -196,7 +193,7 @@
       border: none;
       cursor: pointer;
       font-size: 18px;
-      color: #000;
+      color: #ffffff;
       padding: 6px 8px;
       border-radius: 6px;
       transition: background 0.2s ease;
@@ -231,6 +228,18 @@
       opacity: 0.4;
       cursor: not-allowed;
     }
+    .animar {
+      opacity: 0;                 
+      transform: translateY(40px); 
+      animation: subir 1s ease-out forwards;
+    }
+
+    @keyframes subir {
+      to {
+        opacity: 1;            
+        transform: translateY(0); 
+      }
+    }
 
     </style>
 </head>
@@ -255,12 +264,12 @@
     if (year) year.textContent = new Date().getFullYear();
   </script>
 
-  <section class="article-container">
+  <section class="article-container animar">
     <h1 class="article-title">
         Articulos: 
     </h1>
 
-  <article class="post">  
+  <article class="post animar">  
     <h1 class="article-title">
         Turismo en Cusco: <br>
         Un Potencial Económico que Necesita Competitividad e Inclusión
@@ -314,19 +323,19 @@
 
       </section>
     <div class="share-article">
-      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+      <a href="#" class="share-facebook" aria-label="Compartir en Facebook">
         f
       </a>
 
-      <a href="#" id="share-x" aria-label="Compartir en X">
+      <a href="#" class="share-x" aria-label="Compartir en X">
         𝕏
       </a>
 
-      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+      <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">
         in
       </a>
 
-      <button id="copy-link" aria-label="Copiar enlace">
+      <button class="copy-link" aria-label="Copiar enlace">
         🔗
       </button>
     </div>
@@ -495,19 +504,19 @@
 
 
     <div class="share-article">
-      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+      <a href="#" class="share-facebook" aria-label="Compartir en Facebook">
         f
       </a>
 
-      <a href="#" id="share-x" aria-label="Compartir en X">
+      <a href="#" class="share-x" aria-label="Compartir en X">
         𝕏
       </a>
 
-      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+      <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">
         in
       </a>
 
-      <button id="copy-link" aria-label="Copiar enlace">
+      <button class="copy-link" aria-label="Copiar enlace">
         🔗
       </button>
     </div>
@@ -597,19 +606,19 @@
     </p>
   </section>
     <div class="share-article">
-      <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+      <a href="#" class="share-facebook" aria-label="Compartir en Facebook">
         f
       </a>
 
-      <a href="#" id="share-x" aria-label="Compartir en X">
+      <a href="#" class="share-x" aria-label="Compartir en X">
         𝕏
       </a>
 
-      <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+      <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">
         in
       </a>
 
-      <button id="copy-link" aria-label="Copiar enlace">
+      <button class="copy-link" aria-label="Copiar enlace">
         🔗
       </button>
     </div>
@@ -689,23 +698,403 @@
 
   </section>
     <div class="share-article">
-        <a href="#" id="share-facebook" aria-label="Compartir en Facebook">
+        <a href="#" class="share-facebook" aria-label="Compartir en Facebook">
           f
         </a>
 
-        <a href="#" id="share-x" aria-label="Compartir en X">
+        <a href="#" class="share-x" aria-label="Compartir en X">
           𝕏
         </a>
 
-        <a href="#" id="share-linkedin" aria-label="Compartir en LinkedIn">
+        <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">
           in
         </a>
 
-        <button id="copy-link" aria-label="Copiar enlace">
+        <button class="copy-link" aria-label="Copiar enlace">
           🔗
         </button>
       </div>
   </article>
+
+  <article class="post animar">  
+  <h1 class="article-title">
+    Del gas de Camisea <br>
+    a la soberanía energética del Perú
+  </h1>
+
+  <section class="article-body">
+
+    <p class="lead">
+      Hablar de soberanía y seguridad energética en el Perú no es un debate técnico. Es un debate político sobre desarrollo, equidad territorial y futuro productivo.
+    </p>
+
+    <p>
+      Han pasado casi dos décadas desde que se inició la explotación del gas de Camisea, ubicado en la región de Cusco. Hoy el gas natural es la principal fuente de energía del país y explica más del 40 % de la electricidad que consumimos. Sin embargo, su uso sigue concentrado en la generación eléctrica, mientras que los hogares y la industria continúan dependiendo del diésel, las gasolinas y el GLP.
+    </p>
+
+    <p>
+      Este es el primer gran problema: el gas no se ha masificado. Apenas alrededor de 10 regiones cuentan con redes domiciliarias y el número de conexiones está muy por debajo de las metas trazadas hace más de una década. La propia región productora, Cusco, sigue sin gas natural en los hogares. En la sierra y la selva, más del 40 % de la población rural continúa cocinando con leña y bosta.
+    </p>
+
+    <p>
+      Eso no es transición energética. Es pobreza energética.
+    </p>
+
+    <p>
+      A este problema se suma una debilidad estructural aún más grave: la alta dependencia de una sola infraestructura troncal de transporte (El gasoducto actual, que fue subsidiado y construido con recursos de la población peruana). El sistema gasífero peruano es frágil frente a fallas técnicas, conflictos sociales o decisiones contractuales. La seguridad energética no puede descansar en un solo ducto.
+    </p>
+
+    <p>
+      Además, el país enfrenta un límite real de reservas. A fines de 2025, el Perú dispone de alrededor de 7 TCF de gas natural y consume aproximadamente 0.5 TCF por año. En el mejor de los escenarios, los lotes actualmente en producción garantizan gas por poco más de una década.
+    </p>
+
+    <p>
+      Este dato es clave: el gas no es una solución permanente. Es un combustible de transición.
+    </p>
+
+    <h2>Arquitectura contractual y renta del recurso</h2>
+
+    <p>
+      En ese contexto, resulta indispensable revisar la arquitectura contractual del sector. Mientras los lotes históricos del proyecto Camisea pagan regalías cercanas al 38 %, los lotes 57 y 58 —donde participa la empresa china China National Petroleum Corporation— operan con regalías contractuales del 5 %. El Lote 57 es explotado junto con Repsol Exploración Perú y el Lote 58 iniciará producción en 2026.
+    </p>
+
+    <p>
+      No se trata de cuestionar la inversión privada. Se trata de discutir, con seriedad, cómo se distribuye la renta de un recurso estratégico.
+    </p>
+
+    <p>
+      El gas natural ha generado más de 67 mil millones de soles en regalías e impuestos. De ese total, más de 33 mil millones llegaron a Cusco por canon y transferencias. Pero una cifra equivalente también ingresó al Gobierno nacional. El problema no es la magnitud del recurso. El problema es que sus beneficios no se han traducido en acceso energético ni en transformación productiva del territorio.
+    </p>
+
+    <p>
+      La provincia de La Convención y distritos como Megantoni o Echarati son ejemplos claros: han recibido recursos históricos, pero siguen sin gas domiciliario.
+    </p>
+
+    <p>
+      A esto se suma un serio déficit de gobernanza. Durante largos periodos, el sector operó sin viceministro y sin dirección técnica estable en hidrocarburos dentro del Ministerio de Energía y Minas. Sin conducción política y técnica, no hay política energética posible.
+    </p>
+
+    <h2>El sistema eléctrico y la estrategia territorial</h2>
+
+    <p>
+      El sistema eléctrico tampoco está alineado con una estrategia territorial del gas. El orden de despacho definido por el Comité de Operación Económica del Sistema Interconectado Nacional prioriza las renovables, la hidroelectricidad y luego las termoeléctricas de gran escala. En la práctica, esto desincentiva la instalación de centrales a gas de menor tamaño en regiones del sur, lo que debilita la viabilidad económica de un gasoducto descentralizado.
+    </p>
+
+    <p>
+      Por eso, el problema de fondo no es solo técnico. Es estratégico.
+    </p>
+
+    <p>
+      Más preocupante aún es que el país no cuenta con un plan integral de diversificación energética. El gas sigue siendo tratado como un fin en sí mismo y no como un puente hacia una matriz más limpia, más descentralizada y más segura.
+    </p>
+
+    <p>
+      El Perú tiene un enorme potencial solar, eólico e hidráulico. Sin embargo, la expansión de energías renovables no convencionales continúa siendo lenta y fragmentada.
+    </p>
+
+    <p>
+      La soberanía energética no se logra solo con reservas. Se logra con diversificación, con infraestructura territorial y con un Estado que oriente el desarrollo.
+    </p>
+
+    <h2>Una propuesta desde “Primero la gente”</h2>
+
+    <p>
+      Desde una visión de desarrollo energético con equidad territorial, planteamos tres ejes claros.
+    </p>
+
+    <h3>Primero, rentabilidad territorial y económica</h3>
+
+    <p>
+      Es indispensable destrabar, con respaldo legal, el Proyecto Sistema Integrado de Transporte de Gas – ex Gasoducto Sur Peruano – y, de manera complementaria, promover soluciones flexibles de transporte, regasificación y redes regionales. El sur, la sierra y la selva no pueden seguir dependiendo de una sola infraestructura costera.
+    </p>
+
+    <h3>Segundo, rentabilidad social</h3>
+
+    <p>
+      Sin una verdadera nivelación tarifaria, la masificación del gas seguirá siendo un discurso. Todos los peruanos deben pagar una tarifa similar a la de Lima. Para una familia promedio, el recibo mensual debería bordear los 30 soles. Esto exige una reforma normativa explícita y un esquema de subsidios energéticos modernos, focalizados y transparentes.
+    </p>
+
+    <h3>Tercero, diversificación energética real</h3>
+
+    <p>
+      Proponemos construir al menos una central de generación renovable en cada departamento, incorporando soluciones de almacenamiento con baterías de ion-litio. Para ello, FONAFE y las empresas eléctricas del Estado deben asumir un rol activo en la estructuración de proyectos, asociaciones público-privadas y financiamiento internacional.
+    </p>
+
+    <p>
+      El objetivo es incorporar, en los próximos cinco años, alrededor de 5 000 MW de nueva capacidad renovable al sistema eléctrico nacional.
+    </p>
+
+    <p>
+      El gas natural debe cumplir su verdadero rol: impulsar la industrialización, reducir la pobreza energética y acompañar la transición. Pero la soberanía energética del Perú no se construirá mirando únicamente al subsuelo. Se construirá, sobre todo, apostando por el sol, el viento, el agua y un Estado capaz de planificar su futuro.
+    </p>
+
+    <p>
+      La seguridad energética es desarrollo. Y el desarrollo, en el Perú, debe empezar —por fin— desde los territorios.
+    </p>
+
+  </section>
+
+  <div class="share-article">
+    <a href="#" class="share-facebook" aria-label="Compartir en Facebook">f</a>
+    <a href="#" class="share-x" aria-label="Compartir en X">𝕏</a>
+    <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">in</a>
+    <button class="copy-link" aria-label="Copiar enlace">🔗</button>
+  </div>
+
+</article>  
+
+  <article class="post animar">  
+  <h1 class="article-title">
+    Descentralización fiscal: <br>
+    sin recursos no hay Estado en el territorio
+  </h1>
+
+  <section class="article-body">
+
+    <p class="lead">
+      La descentralización política, administrativa y fiscal que el Perú inició a comienzos de este siglo no fue un error ni una improvisación. Fue una decisión de Estado: acercar el poder público a la gente, trasladar competencias reales a los gobiernos regionales y locales, y hacer más eficiente la provisión de servicios públicos en todo el territorio.
+    </p>
+
+    <p>
+      Su objetivo fue —y sigue siendo— uno solo: que los servicios del Estado lleguen mejor, más rápido y con mayor calidad a las personas, allí donde viven.
+    </p>
+
+    <p>
+      La descentralización fiscal es la columna vertebral de ese proceso. Significa que los gobiernos subnacionales cuenten con recursos propios o con transferencias estables desde el nivel nacional, para administrar un presupuesto y responder a las necesidades de su población. Y sí: bien diseñada, la descentralización fiscal genera crecimiento económico, dinamiza los territorios y fortalece la institucionalidad pública.
+    </p>
+
+    <h2>El fondo del debate</h2>
+
+    <p>
+      Pero vayamos al fondo del debate.
+    </p>
+
+    <p>
+      ¿La descentralización ha mejorado los servicios públicos? ¿Ha mejorado la calidad del gasto? ¿Debe eliminarse el nivel regional de gobierno?
+    </p>
+
+    <p>
+      Estas preguntas no son técnicas. Son profundamente políticas.
+    </p>
+
+    <p>
+      Durante años se ha instalado una narrativa centralista según la cual la descentralización fracasó. Que los servicios no llegan. Que los gobiernos regionales no sirven. Que la solución es recentralizar el gasto en salud y educación. Que hay que restringir aún más a las municipalidades porque son incapaces o corruptas.
+    </p>
+
+    <p>
+      Ese discurso no busca corregir la descentralización. Busca desmantelarla.
+    </p>
+
+    <p>
+      Y se equivoca de diagnóstico.
+    </p>
+
+    <p>
+      Descentralizar no es crear más oficinas. Descentralizar es cambiar la vida concreta de las personas.
+    </p>
+
+    <p>
+      Descentralización es que tus hijos puedan estudiar en tu propio departamento y recibir una educación de la misma calidad que en Lima.
+    </p>
+
+    <p>
+      Descentralización es que no tengas que viajar a la capital para una atención médica especializada, porque tu región cuenta con profesionales y equipamiento adecuados.
+    </p>
+
+    <p>
+      Descentralización es que tu territorio conozca, gestione y aproveche su propia capacidad económica.
+    </p>
+
+    <h2>Un ejemplo claro: Cusco</h2>
+
+    <p>
+      Tomemos un ejemplo claro: Cusco.
+    </p>
+
+    <p>
+      En esta región operan grandes empresas mineras, importantes cadenas hoteleras y de transporte ligadas al turismo, y también la empresa que explota el gas de Camisea. Sin embargo, la mayor parte de los tributos generados por estas actividades se declaran y se pagan en Lima.
+    </p>
+
+    <p>
+      Eso no es descentralización. Es centralismo fiscal.
+    </p>
+
+    <p>
+      Descentralizar implica sincerar el domicilio fiscal de las actividades económicas para conocer cuánto se recauda realmente en cada territorio. Y hacerlo no debilita el rol rector del Gobierno Nacional ni del Tesoro Público. Por el contrario, fortalece la gobernanza fiscal del país.
+    </p>
+
+    <p>
+      Pero descentralizar también es reconocer que no todos los territorios tienen la misma capacidad de generar ingresos. Por eso, los fondos de compensación no son un privilegio: son un instrumento de equidad territorial.
+    </p>
+
+    <p>
+      Descentralizar es generar predictibilidad. Es que los gobiernos regionales y locales puedan planificar su inversión y no vivir —como hoy— a la espera de transferencias de último momento que obligan a gastar mal, rápido y sin impacto.
+    </p>
+
+    <p>
+      Descentralizar, incluso, es una herramienta poderosa contra la informalidad. Cuando el ciudadano ve que sus impuestos regresan en servicios concretos en su propio territorio, entiende que cumplir sí vale la pena.
+    </p>
+
+    <p>
+      Por eso lo digo con claridad: la idea de que el Perú estaría mejor volviendo al modelo centralista es falsa. Con todos sus errores y limitaciones, la descentralización ha sido superior al esquema anterior.
+    </p>
+
+    <p>
+      El problema no es que descentralizamos. El problema es que lo hicimos a medias.
+    </p>
+
+    <h2>El verdadero reto</h2>
+
+    <p>
+      Hoy, el verdadero reto es político e institucional:
+    </p>
+
+    <ul>
+      <li>consolidar claramente las competencias de cada nivel de gobierno;</li>
+      <li>consolidar los ingresos fiscales de regiones y municipalidades para incentivar el esfuerzo recaudatorio y la buena programación presupuestal;</li>
+      <li>reformar los sistemas administrativos con una mirada descentralista;</li>
+      <li>reorganizar los gobiernos subnacionales para que la eficiencia sea un instrumento real de política pública;</li>
+      <li>y fortalecer, de manera decidida, la meritocracia en el servicio civil territorial.</li>
+    </ul>
+
+    <p>
+      Sin un Estado fuerte en las regiones, no hay país integrado.
+    </p>
+
+    <h2>El corazón de la reforma: FONCOMUN y FONCOR</h2>
+
+    <p>
+      Si queremos que la descentralización funcione, debemos resolver su principal debilidad: la fragilidad de su financiamiento.
+    </p>
+
+    <p>
+      Por ello, planteamos una reforma estructural al Fondo de Compensación Municipal y al Fondo de Compensación Regional.
+    </p>
+
+    <p>
+      Los recursos del FONCOMUN y del FONCOR se consolidan como transferencias automáticas provenientes de dos puntos porcentuales del IGV, conforme al marco legal vigente, y se integran en un esquema estable de coparticipación fiscal entre:
+    </p>
+
+    <ul>
+      <li>el Gobierno Nacional,</li>
+      <li>los Gobiernos Regionales,</li>
+      <li>y los Gobiernos Locales.</li>
+    </ul>
+
+    <p>
+      En términos simples: de los 18 puntos del IGV, se asignan 2 puntos para los gobiernos regionales y, de manera progresiva, 2 puntos para las municipalidades.
+    </p>
+
+    <p>
+      Esto no significa crear un nuevo impuesto ni debilitar la caja fiscal del Estado. Significa reordenar las fuentes de financiamiento del gasto subnacional.
+    </p>
+
+    <h2>Un uso moderno y responsable de los recursos</h2>
+
+    <p>
+      Los recursos consolidados del FONCOMUN y del FONCOR se destinan estrictamente a inversión pública, bajo un enfoque moderno de gestión.
+    </p>
+
+    <p>
+      Se autoriza expresamente su utilización en tres niveles, comenzando por un componente clave que hoy el sistema castiga: gasto corriente habilitante para la inversión.
+    </p>
+
+    <p>
+      Esto incluye:
+    </p>
+
+    <ul>
+      <li>estudios de preinversión,</li>
+      <li>expedientes técnicos,</li>
+      <li>supervisión,</li>
+      <li>gestión de proyectos,</li>
+      <li>y operación inicial de la infraestructura.</li>
+    </ul>
+
+    <p>
+      No más proyectos paralizados por falta de gestión.
+    </p>
+
+    <p>
+      Este esquema no recorta recursos al Estado. Compensa y ordena las fuentes que hoy financian la inversión subnacional: recursos ordinarios, operaciones de crédito y parte de los recursos determinados.
+    </p>
+
+    <h2>La propuesta del plan de gobierno “Primero la gente”</h2>
+
+    <p>
+      Nuestra propuesta es directa y responsable: dar a los gobiernos regionales y locales una fuente estable, predecible y automática para invertir.
+    </p>
+
+    <p>
+      En materia de fuentes de financiamiento, planteamos consolidar el FONCOR y el FONCOMUN como el principal mecanismo de distribución equitativa, y avanzar hacia un esquema simplificado de solo tres grandes fuentes:
+    </p>
+
+    <ul>
+      <li>una fuente consolidada de transferencias territoriales (FONCOR–FONCOMUN–recursos ordinarios),</li>
+      <li>compensando gradualmente el uso de operaciones de crédito,</li>
+      <li>y reorganizando los recursos determinados, como canon, regalías e impuestos prediales.</li>
+    </ul>
+
+    <p>
+      No se trata de quitar recursos a nadie. Se trata de ordenar el sistema para que funcione mejor.
+    </p>
+
+    <h2>De cerrar brechas a generar desarrollo</h2>
+
+    <p>
+      En el uso de los recursos, el cambio es aún más profundo.
+    </p>
+
+    <p>
+      Por supuesto que seguiremos cerrando brechas de infraestructura social: agua, salud, educación, carreteras.
+    </p>
+
+    <p>
+      Pero el Perú no puede seguir midiendo su política pública solo en número de obras.
+    </p>
+
+    <p>
+      Ahora debemos avanzar hacia: cierre de logros territoriales.
+    </p>
+
+    <p>
+      No solo más aulas, sino mejores aprendizajes. No solo más camas hospitalarias, sino menos anemia, menos mortalidad, mejor atención.
+    </p>
+
+    <p>
+      Y, de manera decidida, hacia inversiones productivas territoriales.
+    </p>
+
+    <p>
+      Es momento de cambiar el chip.
+    </p>
+
+    <p>
+      Si el Estado puede financiar infraestructura de riego para grandes empresas, también debe poder financiar establos, cadenas de frío, centros de acopio, plantas de transformación, plataformas logísticas e innovación productiva para pequeños productores.
+    </p>
+
+    <p>
+      La inversión pública no puede seguir siendo únicamente social. Debe ser también productiva.
+    </p>
+
+    <p>
+      Porque el verdadero desarrollo no se mide solo en obras. Se mide en ingresos para las familias, en empleo local, en cadenas productivas regionales y en territorios capaces de sostener su propio crecimiento.
+    </p>
+
+    <p>
+      Eso, y no otra cosa, es una descentralización fiscal auténtica.
+    </p>
+
+  </section>
+
+  <div class="share-article">
+    <a href="#" class="share-facebook" aria-label="Compartir en Facebook">f</a>
+    <a href="#" class="share-x" aria-label="Compartir en X">𝕏</a>
+    <a href="#" class="share-linkedin" aria-label="Compartir en LinkedIn">in</a>
+    <button class="copy-link" aria-label="Copiar enlace">🔗</button>
+  </div>
+
+</article>
   
   <div class="pagination">
     <button id="prev">← Anterior</button>
@@ -718,7 +1107,7 @@
     const title = document.querySelector('.article-title')?.innerText || document.title;
 
     document.getElementById('share-facebook').href =
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      `https://www.facebook.com/jeanpaul.benaventegarcia/?locale=es_LA=${encodeURIComponent(url)}`;
 
     document.getElementById('share-x').href =
       `https://x.com/jp_benavente?s=11&t=l0ksA__UK-1zjH5poissKg=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
@@ -768,6 +1157,38 @@
 
     renderPage();
   </script>
+
+  <script>
+    document.querySelectorAll('.post').forEach(post => {
+      const url = window.location.href;
+      const title = post.querySelector('.article-title')?.innerText || document.title;
+
+      post.querySelector('.share-facebook').addEventListener('click', e => {
+        e.preventDefault();
+        location.href =
+          `https://www.facebook.com/jeanpaul.benaventegarcia/?locale=es_LA=${encodeURIComponent(url)}`;
+      });
+
+      post.querySelector('.share-x').addEventListener('click', e => {
+        e.preventDefault();
+        location.href =
+          `https://x.com/jp_benavente?s=11&t=l0ksA__UK-1zjH5poissKg=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+      });
+
+      post.querySelector('.share-linkedin').addEventListener('click', e => {
+        e.preventDefault();
+        location.href =
+          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+      });
+
+      post.querySelector('.copy-link').addEventListener('click', e => {
+        e.preventDefault();
+        navigator.clipboard.writeText(url);
+        alert('Enlace copiado 📋');
+      });
+    });
+  </script>
+
 
 </body>
 </html>
